@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 const items = [
   { 
     title: "Craftra", 
-    desc: "A high-end creative agency website with modern UI/UX.", 
+    desc: "Elegant e-commerce platform for premium products.", 
     tag: "Agency", 
     url: "https://www.craftra.co/"
   },
   { 
     title: "New Lakshmi Store", 
-    desc: "Elegant e-commerce platform for premium products.", 
+    desc: "Connects businesses seamlessly, helping them showcase services.", 
     tag: "E-commerce", 
     url: "https://www.newlakshmistore.com/"
   },

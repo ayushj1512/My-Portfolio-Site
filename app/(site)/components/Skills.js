@@ -76,7 +76,7 @@ const focusAreas = [
 
 export default function SkillsAndFocus() {
   return (
-    <section id="skills" className="py-2 relative overflow-hidden ">
+    <section id="skills" className="py-20 relative overflow-hidden ">
       <div className="section-container space-y-28 relative z-10">
         {/* Skills Section */}
         <div>
@@ -169,10 +169,9 @@ export default function SkillsAndFocus() {
                 viewport={{ once: true }}
                 whileHover={{
                   y: -10,
-                  scale: 1.07,
+                  scale: 1.05,
                   boxShadow: "0 0 25px rgba(0, 255, 180, 0.5), 0 0 50px rgba(0, 255, 180, 0.3)",
                 }}
-                transition={{ type: "spring", stiffness: 200, damping: 18, duration: 0.5, delay: idx * 0.1 }}
                 className="relative p-8 rounded-2xl bg-black border border-accent/20 backdrop-blur-md group overflow-hidden min-h-[240px] shadow-md hover:shadow-accent/20 transition text-left"
               >
                 {/* Glowing background animation */}

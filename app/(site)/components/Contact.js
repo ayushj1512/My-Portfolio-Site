@@ -1,43 +1,105 @@
 "use client";
 import { motion } from "framer-motion";
-import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import Image from "next/image";
+import { EnvelopeIcon } from "@heroicons/react/24/outline";
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24">
-      <div className="section-container grid md:grid-cols-2 gap-10 items-center">
+    <section
+      id="contact"
+      className="relative overflow-hidden bg-black/30 py-20"
+    >
+      <div className="section-container grid md:grid-cols-2 gap-10 place-items-center">
+        
+        {/* Left Side - Contact Photo */}
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
+          className="w-full flex justify-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Let&apos;s create something exceptional</h2>
-          <p className="text-white/70 mb-6">Email me or use the form and I&apos;ll get back to you.</p>
-          <div className="flex gap-4 text-xl text-white/70">
-            <a aria-label="LinkedIn" href="#" className="hover:text-white transition"><FaLinkedin /></a>
-            <a aria-label="GitHub" href="#" className="hover:text-white transition"><FaGithub /></a>
-            <a aria-label="Twitter" href="#" className="hover:text-white transition"><FaTwitter /></a>
+          <div className="relative rounded-2xl overflow-hidden border-4 border-white shadow-lg max-w-sm group">
+            <Image
+              src="/ai.png"
+              alt="Ayush Juneja Avatar"
+              width={500}
+              height={600}
+              className="object-cover transition-opacity"
+            />
           </div>
         </motion.div>
 
-        <motion.form
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
+        {/* Right Side - Contact Info */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="card p-6"
-          method="POST"
-          action="mailto:you@example.com"
-          encType="text/plain"
+          transition={{ duration: 0.8, delay: 0.15 }}
+          className="flex flex-col items-start gap-6 w-full"
         >
-          <div className="grid gap-4">
-            <input className="w-full rounded-xl bg-black/30 border border-white/10 px-4 py-3 outline-none focus:border-accent/60" placeholder="Your name" name="name" required />
-            <input className="w-full rounded-xl bg-black/30 border border-white/10 px-4 py-3 outline-none focus:border-accent/60" placeholder="Email address" type="email" name="email" required />
-            <textarea className="w-full rounded-xl bg-black/30 border border-white/10 px-4 py-3 outline-none focus:border-accent/60 min-h-[140px]" placeholder="Message" name="message" required />
-            <button type="submit" className="btn-primary">Send Message</button>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white">
+            Let&apos;s Build Something Awesome Together!
+          </h2>
+          <p className="text-white/70 max-w-md">
+            I&apos;m always excited to connect, collaborate, and create. 
+            Reach out via any of the platforms below, or just say hi!
+          </p>
+
+          <div className="flex flex-col md:flex-row gap-4">
+            <a
+              href="https://www.linkedin.com/in/ayush-juneja-3978861b8/"
+              target="_blank"
+              className="flex items-center gap-2 px-4 py-3 rounded-2xl bg-black/40 hover:bg-accent transition text-white hover:scale-105"
+            >
+              <FaLinkedin className="w-5 h-5" /> LinkedIn
+            </a>
+            <a
+              href="https://github.com/ayushj1512"
+              target="_blank"
+              className="flex items-center gap-2 px-4 py-3 rounded-2xl bg-black/40 hover:bg-accent transition text-white hover:scale-105"
+            >
+              <FaGithub className="w-5 h-5" /> GitHub
+            </a>
+            <a
+              href="mailto:ayushjuneja999@gmail.com"
+              className="flex items-center gap-2 px-4 py-3 rounded-2xl bg-black/40 hover:bg-accent transition text-white hover:scale-105"
+            >
+              <EnvelopeIcon className="w-5 h-5" /> Email
+            </a>
+            <a
+              href="https://wa.me/919811195362"
+              target="_blank"
+              className="flex items-center gap-2 px-4 py-3 rounded-2xl bg-black/40 hover:bg-accent transition text-white hover:scale-105"
+            >
+              <FaWhatsapp className="w-5 h-5" /> WhatsApp
+            </a>
           </div>
-        </motion.form>
+
+          {/* Contact Form Fields */}
+          <div className="flex flex-col gap-4 w-full max-w-md mt-4">
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="w-full px-4 py-3 rounded-2xl bg-black/40 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-accent"
+            />
+            <input
+              type="text"
+              placeholder="Mobile / Email"
+              className="w-full px-4 py-3 rounded-2xl bg-black/40 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-accent"
+            />
+            <textarea
+              placeholder="Message"
+              rows={4}
+              className="w-full px-4 py-3 rounded-2xl bg-black/40 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-accent resize-none"
+            />
+          </div>
+
+          <p className="text-white/50 text-sm mt-4">
+            ayushjuneja999@gmail.com | +91 9811195362
+          </p>
+        </motion.div>
       </div>
     </section>
   );

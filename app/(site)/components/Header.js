@@ -8,10 +8,10 @@ export default function Header() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
       className="w-full py-6 px-8 flex items-center justify-between 
-                 z-50 bg-black/40 backdrop-blur-md shadow-md"
+                 z-99 bg-black/80 backdrop-blur-md shadow-md"
     >
       {/* Name */}
-      <h1 className="text-3xl font-bold">
+      <h1 className="text-3xl font-bold px-10">
         <span className="text-white">ayush.</span>
         <span className="text-accent">juneja</span>
       </h1>

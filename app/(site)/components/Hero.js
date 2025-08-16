@@ -5,8 +5,8 @@ import { Typewriter } from 'react-simple-typewriter';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden">
-      <div className="section-container grid md:grid-cols-2 gap-10 place-items-center min-h-[80vh] py-20">
+    <section id="hero" className="relative overflow-hidden">
+      <div className="section-container grid md:grid-cols-2 gap-10 place-items-center min-h-[80vh] pb-20 pt-10">
         
         {/* Left Side - Intro */}
         <motion.div
@@ -69,10 +69,11 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.15 }}
           className="w-full flex justify-center items-center min-h-[500px]"
         >
-          <div className="relative rounded-2xl overflow-hidden border-4 border-accent/50 shadow-lg max-w-sm group">
+          <div className="relative rounded-2xl overflow-hidden border-4 border-white shadow-lg max-w-sm group">
             {/* Default Image */}
             <Image
-              src="/avataar2.png"
+            src="/workingonlaptop.png"
+              
               alt="Ayush Juneja Avatar"
               width={500}
               height={600}
@@ -80,7 +81,7 @@ export default function Hero() {
             />
             {/* Hover Image */}
             <Image
-              src="/avataar3.png"
+              src="/perfectme.png"
               alt="Ayush Juneja Hover Avatar"
               width={500}
               height={600}

@@ -9,7 +9,7 @@ const links = [
   { href: "#skills", label: "Skills", icon: <Code size={18} /> },
   { href: "#projects", label: "Projects", icon: <FolderKanban size={18} /> },
   { href: "#timeline", label: "Timeline", icon: <Clock size={18} /> },
-  { href: "#contact", label: "Contact", icon: <Mail size={18} /> },
+  { href: "#contact", label: "Contact Me", icon: <Mail size={18} /> },
 ];
 
 export default function Navbar() {
@@ -20,7 +20,7 @@ export default function Navbar() {
       initial={{ x: -40, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="fixed top-1/2 left-6 -translate-y-1/2 z-50 flex flex-col items-start gap-4"
+      className="fixed top-40 left-6 z-50 flex flex-col items-start gap-4"
     >
       {links.map((l) => (
         <motion.a

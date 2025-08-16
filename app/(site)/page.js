@@ -7,10 +7,11 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Skills from "./components/Skills";
 import Timeline from './components/Timeline';
-import Header from './components/Header'
+import Header from './components/Header';
+
 export default function Page() {
   return (
-    <main>
+    <main className="bg-black">
       {/* Navbar always floating on left center */}
       <Navbar />
       <Header />
