@@ -14,23 +14,23 @@ export default function Hero() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="space-y-6 flex flex-col justify-center min-h-[500px]"
+          className="space-y-6 pl-12 flex flex-col justify-center min-h-[500px]"
         >
-          <p className="uppercase tracking-widest text-accent/80 text-xs">
-            Software Developer
+          <p className="uppercase tracking-widest text-white text-xl">
+            Software Engineer
           </p>
 
           {/* Typewriter Intro with fixed height for 2 lines */}
           <h1 className="text-4xl md:text-6xl font-extrabold leading-[1.1]"> 
-            Hi, I&apos;m <span className="text-accent">Ayush Juneja</span>.
+            Hi, I&apos;m <span className="text-accent text-7xl">Ayush Juneja</span>.
             <br />
-            <span className="text-white/80 block min-h-[140px] md:min-h-[250px]"> 
+            <span className="text-white/80 block min-h-[150px] md:min-h-[250px]"> 
               <Typewriter
                 words={[
                   "Building sleek, scalable digital experiences.",
                   "Turning ideas into elegant, user-focused products.",
                   "Creating solutions that leave a lasting impression.",
-                  "Passionate about web development and AI-driven projects."
+                  "Passionate about AI-driven projects."
                 ]}
                 loop={true}
                 cursor
@@ -42,10 +42,8 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="text-white/70 max-w-xl">
-            B.Tech CSE student with 1+ year of experience creating impactful
-            digital solutions. Skilled in React, Next.js, and modern web technologies.
-            Always learning, always coding, always improving.
+          <p className="text-white/70 max-w-xl text-xl text-justify ">
+            Software Engineer @ SSS | Co-Founder @ Engageer | B.Tech CSE | AI-Powered Solutions | Prompt Engineering | Scalable Web & App Development
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -67,9 +65,9 @@ export default function Hero() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.15 }}
-          className="w-full flex justify-center items-center min-h-[500px]"
+          className="w-full flex justify-center pl-20 items-center min-h-[500px]"
         >
-          <div className="relative rounded-2xl overflow-hidden border-4 border-white shadow-lg max-w-sm group">
+          <div className="relative rounded-2xl overflow-hidden border-4  border-white shadow-lg max-w-sm group">
             {/* Default Image */}
             <Image
             src="/workingonlaptop.png"

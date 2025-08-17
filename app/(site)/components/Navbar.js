@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Home, User, Code, FolderKanban, Clock, Mail } from "lucide-react";
+import { Home, User, Code, FolderKanban, Clock, Mail, FileText } from "lucide-react";
 
 const links = [
   { href: "#hero", label: "Home", icon: <Home size={18} /> },
@@ -10,8 +10,9 @@ const links = [
   { href: "#projects", label: "Projects", icon: <FolderKanban size={18} /> },
   { href: "#timeline", label: "Timeline", icon: <Clock size={18} /> },
   { href: "#contact", label: "Contact Me", icon: <Mail size={18} /> },
+  // ✅ New Resume link
+  { href: "/Ayush-Juneja.Tech.pdf", label: "Resume", icon: <FileText size={18} />, download: true },
 ];
-
 export default function Navbar() {
   const [hovered, setHovered] = useState(null);
 
@@ -26,6 +27,7 @@ export default function Navbar() {
         <motion.a
           key={l.href}
           href={l.href}
+          {...(l.download ? { download: true } : {})} // ✅ Resume ke liye download attribute
           onMouseEnter={() => setHovered(l.href)}
           onMouseLeave={() => setHovered(null)}
           animate={{
@@ -40,7 +42,7 @@ export default function Navbar() {
             {l.icon}
           </div>
 
-          {/* Label inside button */}
+          {/* Label */}
           <motion.span
             animate={{
               opacity: hovered === l.href ? 1 : 0,

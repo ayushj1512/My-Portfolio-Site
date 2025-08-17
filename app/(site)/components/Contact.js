@@ -39,9 +39,13 @@ export default function Contact() {
           transition={{ duration: 0.8, delay: 0.15 }}
           className="flex flex-col items-start gap-6 w-full"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white">
-            Let&apos;s Build Something Awesome Together!
-          </h2>
+     <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+  <span className="text-white">Let&apos;s Build </span>
+  <span className="text-accent">Something Awesome</span>
+  <span className="text-white"> Together!!!</span>
+</h2>
+
+
           <p className="text-white/70 max-w-md">
             I&apos;m always excited to connect, collaborate, and create. 
             Reach out via any of the platforms below, or just say hi!
