@@ -13,23 +13,33 @@ export default function Contact() {
       <div className="section-container grid md:grid-cols-2 gap-10 place-items-center">
         
         {/* Left Side - Contact Photo */}
-        <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="w-full flex justify-center"
-        >
-          <div className="relative rounded-2xl overflow-hidden border-4 border-white shadow-lg max-w-sm group">
-            <Image
-              src="/ai.png"
-              alt="Ayush Juneja Avatar"
-              width={500}
-              height={600}
-              className="object-cover transition-opacity"
-            />
-          </div>
-        </motion.div>
+      <motion.div
+               initial={{ opacity: 0, scale: 0.96 }}
+               whileInView={{ opacity: 1, scale: 1 }}
+               viewport={{ once: true }}
+               transition={{ duration: 0.8, delay: 0.15 }}
+               className="w-full flex justify-center pl-20 items-center min-h-[500px]"
+             >
+               <div className="relative rounded-2xl overflow-hidden border-4  border-white shadow-lg max-w-sm group">
+                 {/* Default Image */}
+                 <Image
+                 src="/ai.png"
+                   
+                   alt="Ayush Juneja Avatar"
+                   width={500}
+                   height={600}
+                   className="object-cover transition-opacity duration-500 group-hover:opacity-0"
+                 />
+                 {/* Hover Image */}
+                 <Image
+                   src="/coding.png"
+                   alt="Ayush Juneja Hover Avatar"
+                   width={500}
+                   height={600}
+                   className="absolute top-0 left-0 object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                 />
+               </div>
+             </motion.div>
 
         {/* Right Side - Contact Info */}
         <motion.div
