@@ -10,9 +10,9 @@ const links = [
   { href: "#projects", label: "Projects", icon: <FolderKanban size={18} /> },
   { href: "#timeline", label: "Timeline", icon: <Clock size={18} /> },
   { href: "#contact", label: "Contact Me", icon: <Mail size={18} /> },
-  // ✅ New Resume link
   { href: "/Ayush-Juneja.Tech.pdf", label: "Resume", icon: <FileText size={18} />, download: true },
 ];
+
 export default function Navbar() {
   const [hovered, setHovered] = useState(null);
 
@@ -21,13 +21,13 @@ export default function Navbar() {
       initial={{ x: -40, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="fixed top-40 left-6 z-50 flex flex-col items-start gap-4"
+      className="hidden md:flex fixed top-40 left-6 z-50 flex-col items-start gap-4"
     >
       {links.map((l) => (
         <motion.a
           key={l.href}
           href={l.href}
-          {...(l.download ? { download: true } : {})} // ✅ Resume ke liye download attribute
+          {...(l.download ? { download: true } : {})}
           onMouseEnter={() => setHovered(l.href)}
           onMouseLeave={() => setHovered(null)}
           animate={{

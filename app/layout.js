@@ -1,4 +1,5 @@
 import "./../styles/globals.css";
+import ToggleCursor from "././(site)/components/ToggleCursor";
 
 export const metadata = {
   title: "Ayush Juneja | Full Stack Developer & Flutter Enthusiast",
@@ -13,6 +14,8 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className="antialiased selection:bg-accent/30 selection:text-white">
+        {/* Client-only ToggleCursor */}
+        <ToggleCursor />
         {children}
       </body>
     </html>

@@ -32,3 +32,4 @@ html, body {
 .btn-primary {
   @apply inline-flex items-center gap-2 rounded-2xl px-5 py-3 bg-accent text-white font-semibold hover:opacity-90 transition;
 }
+

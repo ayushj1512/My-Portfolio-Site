@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import FuzzyText from './FuzzyText';
 
 const items = [
   { 
@@ -29,31 +30,36 @@ const items = [
 ];
 
 export default function Projects() {
+  const hoverIntensity = 0.4;
+  const enableHover = true;
+
   return (
     <section id="projects" className="py-28 relative overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute inset-0 " />
+      <div className="absolute inset-0" />
 
-      <div className="section-container relative z-10">
+      <div className="section-container relative z-10 text-center">
         {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-20"
-        >
-          <h2 className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-accent via-white to-accent bg-clip-text text-transparent drop-shadow-lg">
+        <div className="mx-auto">
+          <FuzzyText
+            fontSize="clamp(1.8rem, 5vw, 3rem)" // responsive & slightly smaller
+            fontWeight={800}
+            color="#8C70D4" // accent color
+            baseIntensity={0.15}
+            hoverIntensity={hoverIntensity}
+            enableHover={enableHover}
+          >
             Crafted With Precision
-          </h2>
-          <div className="w-28 h-1 mx-auto mt-4 bg-gradient-to-r from-transparent via-accent to-transparent rounded-full animate-pulse" />
-          <p className="mt-4 text-white/70 max-w-3xl mx-auto text-lg">
-            A curated selection of my most impactful digital builds — blending creativity, technology, and flawless execution.
+          </FuzzyText>
+
+          <p className="mt-4 text-white/70 max-w-3xl mx-auto text-base md:text-lg">
+            A curated selection of my most impactful digital builds — blending
+            creativity, technology, and flawless execution.
           </p>
-        </motion.div>
+        </div>
 
         {/* Project Grid */}
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 mt-10">
           {items.map((it, i) => (
             <motion.a
               href={it.url}
@@ -79,13 +85,15 @@ export default function Projects() {
 
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
+
               {/* Content */}
               <div className="absolute bottom-0 left-0 w-full p-6 translate-y-8 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
                 <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-accent to-accent/70 text-black shadow-sm mb-3 group-hover:animate-pulse">
                   {it.tag}
                 </span>
-                <h3 className="text-xl md:text-2xl font-bold text-white">{it.title}</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-white">
+                  {it.title}
+                </h3>
                 <p className="text-white/70 text-sm mt-1">{it.desc}</p>
               </div>
             </motion.a>
