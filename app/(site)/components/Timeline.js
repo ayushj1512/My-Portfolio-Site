@@ -49,9 +49,11 @@ export default function Timeline() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-accent via-white to-accent bg-clip-text text-transparent drop-shadow-lg">
-            Developer’s Evolution
-          </h2>
+<h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+  <span className="text-white">Developer </span>
+  <span className="text-accent">Evolution</span>
+
+</h2>
           <div className="w-28 h-1 mx-auto mt-4 bg-gradient-to-r from-transparent via-accent to-transparent rounded-full" />
           <p className="mt-6 text-white/70 max-w-2xl mx-auto leading-relaxed">
             A timeline of growth, learning, and building impactful digital
