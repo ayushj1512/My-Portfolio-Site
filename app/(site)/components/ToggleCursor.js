@@ -11,16 +11,22 @@ export default function ToggleCursor() {
     <>
       {/* Toggle Button */}
       <div className="fixed bottom-6 right-6 z-50 hidden md:block">
-        <button
-          onClick={() => setCursorEnabled(!cursorEnabled)}
-          className="px-6 py-3 bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500
-                     text-white font-bold rounded-2xl shadow-[0_0_15px_rgba(255,0,255,0.6)]
-                     hover:shadow-[0_0_25px_rgba(255,0,255,0.9)] hover:scale-110 
-                     transition-all duration-500 ease-in-out
-                     animate-gradient-x"
-        >
-          {cursorEnabled ? "Disable Cursor" : "Enable Cursor"}
-        </button>
+<button
+  onClick={() => setCursorEnabled(!cursorEnabled)}
+  className="
+    px-5 py-3
+    bg-purple-600 text-white font-semibold
+    rounded-2xl
+    shadow-lg shadow-purple-600/30
+    hover:bg-purple-500 hover:shadow-purple-500/40 hover:-translate-y-0.5
+    active:translate-y-0 active:bg-purple-700
+    transition-all duration-300
+    focus:outline-none focus-visible:ring-4 focus-visible:ring-purple-400/40
+  "
+>
+  {cursorEnabled ? "Disable Cursor" : "Enable Cursor"}
+</button>
+
       </div>
 
       {/* Conditionally render SplashCursor */}
